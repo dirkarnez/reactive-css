@@ -11,17 +11,23 @@ th, td {
   text-align: left;
   padding: 8px;
 }
-
-tr:nth-child(even) {
-  background-color: #D6EEEE;
-}
 </style>
 <script>
-function demo() {
-  debugger;
-  
-  const a = document.styleSheets[1].cssRules[0];
+const reativeStyle = isEven => `
+tr:nth-child(${isEven ? "even" : "odd"}) {
+  background-color: #D6EEEE;
 }
+`;
+
+var sheet = document.createElement('style')
+sheet.innerHTML = reativeStyle(true);
+
+document.head.appendChild(sheet);
+
+function demo() {
+  sheet.innerHTML = reativeStyle(false);
+}
+
 </script>
 </head>
 <body>
