@@ -13,6 +13,7 @@ th, td {
 }
 </style>
 <script>
+let isEven = true;
 const reativeStyle = isEven => `
 tr:nth-child(${isEven ? "even" : "odd"}) {
   background-color: #D6EEEE;
@@ -20,12 +21,11 @@ tr:nth-child(${isEven ? "even" : "odd"}) {
 `;
 
 var sheet = document.createElement('style')
-sheet.innerHTML = reativeStyle(true);
-
+sheet.innerHTML = reativeStyle(isEven);
 document.head.appendChild(sheet);
 
 function demo() {
-  sheet.innerHTML = reativeStyle(false);
+  sheet.innerHTML = reativeStyle((isEven = !isEven));
 }
 
 </script>
