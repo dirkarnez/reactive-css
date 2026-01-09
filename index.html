@@ -1,7 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap-reboot.min.css" rel="stylesheet">
+</head>
+<script>
+let isEven = true;
+const reativeStyle = isEven => `
 table {
   border-collapse: collapse;
   width: 100%;
@@ -11,10 +17,7 @@ th, td {
   text-align: left;
   padding: 8px;
 }
-</style>
-<script>
-let isEven = true;
-const reativeStyle = isEven => `
+
 tbody tr:nth-child(${isEven ? "even" : "odd"}) {
   background-color: #D6EEEE;
 }
