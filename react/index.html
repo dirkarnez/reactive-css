@@ -25,10 +25,10 @@
           padding: 8px;
         }
 
-        tr:nth-child(${isEven ? "even" : "odd"}) {
+        tbody tr:nth-child(${isEven ? "even" : "odd"}) {
           background-color: #D6EEEE;
         }
-        `
+        `;
 
         React.useEffect(() => {
           styleRef.current.innerHTML = reativeStyle(isEven);
