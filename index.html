@@ -15,7 +15,7 @@ th, td {
 <script>
 let isEven = true;
 const reativeStyle = isEven => `
-tr:nth-child(${isEven ? "even" : "odd"}) {
+tbody tr:nth-child(${isEven ? "even" : "odd"}) {
   background-color: #D6EEEE;
 }
 `;
@@ -32,33 +32,37 @@ function demo() {
 </head>
 <body>
 
-<table>
-  <tr>
-  <th>First Name</th>
-  <th>Last Name</th>
-  <th>Points</th>
-  </tr>
-  <tr>
-  <td>Peter</td>
-  <td>Griffin</td>
-  <td>$100</td>
-  </tr>
-  <tr>
-  <td>Lois</td>
-  <td>Griffin</td>
-  <td>$150</td>
-  </tr>
-  <tr>
-  <td>Joe</td>
-  <td>Swanson</td>
-  <td>$300</td>
-  </tr>
-  <tr>
-  <td>Cleveland</td>
-  <td>Brown</td>
-  <td>$250</td>
-  </tr>
-</table>
+  <table>
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Points</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Peter</td>
+        <td>Griffin</td>
+        <td>$100</td>
+      </tr>
+      <tr>
+        <td>Lois</td>
+        <td>Griffin</td>
+        <td>$150</td>
+      </tr>
+      <tr>
+        <td>Joe</td>
+        <td>Swanson</td>
+        <td>$300</td>
+      </tr>
+      <tr>
+        <td>Cleveland</td>
+        <td>Brown</td>
+        <td>$250</td>
+      </tr>
+    </tbody>
+  </table>
 
 <button onclick="demo()">Reactive css</button>
 
